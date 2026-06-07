@@ -151,6 +151,7 @@ main {
     overflow: hidden;
     box-shadow: 0 5px 15px var(--card-shadow);
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    min-height: 500px; /* ФИКСИРОВАННАЯ ВЫСОТА: не дает карточке прыгать при смене языка */
 }
 
 .fruit-section:hover {
@@ -159,7 +160,6 @@ main {
 
 .fruit-image {
     flex: 1;
-    min-height: 350px;
     background-size: cover;
     background-position: center;
 }
@@ -333,10 +333,11 @@ footer {
     
     .fruit-section {
         flex-direction: column;
+        min-height: auto; /* На мобильных убираем фикс высоту, чтобы карточки растягивались вниз нормально */
     }
 
     .fruit-image {
-        min-height: 250px;
+        min-height: 250px; /* Фикс для картинок на телефоне */
     }
 
     .resources-grid {
